@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'MaPolice';
+    src: url('stratum2-bold-webfont.ttf') format('truetype'); /* Utilisation du fichier de police dans le même dossier que le CSS */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MaPolice', Arial, sans-serif; /* Utilisation de la police personnalisée */
+    /* Autres styles CSS */
+    margin: 0;
+    padding: 0;
+    background-image: url('svgtopng/bgGray.png'); /* Spécifiez le chemin vers votre image */
+    background-repeat: repeat; /* Répète l'image verticalement et horizontalement */
+    background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du header */
+    background-position: center; /* Centrez l'image dans le header */
+    color: #000000; /* Couleur du texte */
+}
+
+header {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.174);
+    background-image:url('svgtopng/header_bg.png'); /* Superpose un dégradé transparent sur l'image de fond */
+    background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du header */
+    background-position: center; /* Centrez l'image dans le header */
+    color: #FFFFFF; /* Couleur du texte dans le header (si nécessaire) */
+    padding: 10px 0;
+    height: 50px; /* Hauteur du header */
+    text-align: center; /* Centre le texte horizontalement à l'intérieur du header */
+    display: flex; /* Utilise Flexbox pour centrer verticalement le contenu */
+    justify-content: space-between; /* Aligne les éléments de manière uniforme dans le conteneur */
+    align-items: center; /* Centre le contenu verticalement */
+    padding: 10px; /* Ajoute du rembourrage autour du header */
+    top: 0;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+footer {
+    background-image: url('svgtopng/bgDarkBlue.png'); /* Spécifiez le chemin vers votre image */
+    background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du footer */
+    background-position: center; /* Centrez l'image dans le footer */
+    color: #FFFFFF; /* Couleur du texte dans le footer */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 18px; /* Taille de la police */
+    bottom: 0;
+}
+
+.logoDiv h1 {
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.834);
+}
+
+.buttons li {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.812);
+}
+
+
+nav {
+    display: flex; /* Utilise Flexbox pour centrer verticalement le contenu */
+    align-items: center; /* Centre le contenu verticalement */
+    width: 100%;
+}
+
+.logoDiv {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 52px; /* Remplacez par la largeur souhaitée */
+    height: 52px; /* Remplacez par la hauteur souhaitée */
+    border-radius: 50%; /* Rend l'image circulaire */
+}
+
+.buttonsDiv {
+    margin-right: 50px; /* Marge à droite du header */
+    margin-left: auto;
+}
+
+nav .buttons {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utilisation de flexbox */
+}
+
+li
+{
+    list-style-type: none;
+}
+
+nav .buttons li {
+    margin-left: 10px; /* Marge entre chaque bouton */
+}
+
+nav .buttons li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px; /* Taille de la police des boutons */
+    transition: text-shadow 0.3s ease; /* Ajout d'une transition pour l'effet de halo */
+}
+
+nav .buttons li a:hover {
+    text-shadow: 0 0 10px rgb(24, 0, 111); /* Ajout d'un effet de halo doré autour du texte */
+}
+
+
+main {
+    padding: 45px 20px 20px; /* Pour laisser de l'espace en haut du contenu */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Elements spéciaux de la page */
+
+.title {
+    font-size: 3em; /* Ajustez la taille en fonction de vos besoins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Ajustez la hauteur en fonction de vos besoins */
+    margin: 0;
+    opacity: 0;
+    animation: fadeInDown 1s forwards;
+}
+
+main > div
+{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 110px;
+    max-width: 80%
+}
+
+.divtel
+{
+    margin-left: 150px;
+}
+
+.imageemail, .imagetel, .imagelinkedin
+{
+    height: 250px; /* La hauteur s'ajustera proportionnellement */
+    display: block; /* Supprime l'espace en bas de l'image */
+    margin: 0 auto; /* Centrer l'image horizontalement si nécessaire */
+    border-radius: 50%; /* rendre l'image ronde */
+    opacity: 0;
+}
+
+.imageemail, .imagelinkedin
+{
+    animation: fadeInLeft 1s forwards;
+}
+
+.imagetel
+{
+    animation: fadeInRight 1s forwards;
+}
+
+.textdivemail, .textdivlinkedin
+{
+    max-width: 100%;
+    opacity: 0;
+    animation: fadeInRight 1s forwards;
+
+}
+
+.textdivtel
+{
+    max-width: 60%;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards;
+}
+
+
+/* Rendre le texte plus gros et en gras pour les informations importantes */
+.email, .tel {
+    font-size: 1.2em; /* Ajustez la taille en fonction de vos besoins */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+.linkedin a
+{
+    text-shadow: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em; /* Ajustez la taille en fonction de vos besoins */
+    font-weight: bold;
+    transition: text-shadow 0.3s ease; /* Ajout d'une transition pour l'effet de halo */
+}
+
+.linkedin a:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.648); /* Ajout d'un effet de halo doré autour du texte */
+}
+
+
+/* Animation fade in de gauche à droite */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation fade in de droite à gauche */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Animation pour le titre */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
