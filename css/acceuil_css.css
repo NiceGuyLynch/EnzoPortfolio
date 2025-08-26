@@ -4,11 +4,17 @@
 }
 
 
+
+html, body {
+    min-height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     font-family: 'MaPolice', Arial, sans-serif; /* Utilisation de la police personnalisée */
     /* Autres styles CSS */
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-image: url('svgtopng/bgGray.png'); /* Spécifiez le chemin vers votre image */
@@ -19,6 +25,10 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.174);
     background-image:url('svgtopng/header_bg.png'); /* Superpose un dégradé transparent sur l'image de fond */
     background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du header */
@@ -31,7 +41,6 @@ header {
     justify-content: space-between; /* Aligne les éléments de manière uniforme dans le conteneur */
     align-items: center; /* Centre le contenu verticalement */
     padding: 10px; /* Ajoute du rembourrage autour du header */
-    top: 0;
 }
 
 main
@@ -39,9 +48,11 @@ main
     display: flex;
     flex-direction: column;
     min-height: 70vh;
+    flex: 1 0 auto;
 }
 
 footer {
+    margin-top: auto;
     background-image: url('svgtopng/bgDarkBlue.png'); /* Spécifiez le chemin vers votre image */
     background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du footer */
     background-position: center; /* Centrez l'image dans le footer */

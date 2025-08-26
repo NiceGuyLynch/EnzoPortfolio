@@ -19,6 +19,10 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.174);
     background-image:url('svgtopng/header_bg.png'); /* Superpose un dégradé transparent sur l'image de fond */
     background-size: cover; /* Ajustez la taille de l'image pour couvrir l'intégralité du header */
@@ -31,7 +35,6 @@ header {
     justify-content: space-between; /* Aligne les éléments de manière uniforme dans le conteneur */
     align-items: center; /* Centre le contenu verticalement */
     padding: 10px; /* Ajoute du rembourrage autour du header */
-    top: 0;
 }
 
 main
